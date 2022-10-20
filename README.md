@@ -2,12 +2,9 @@
 For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
 
 # Logseq-default-queries-journals
-
-
  - Enhancing Journal Queries turns Logseq into an outliner task management tool.
- ![1662770461291-FhSBaJXekb](https://user-images.githubusercontent.com/111847207/189484746-8364ad0c-98d2-4117-b321-b79d7c56052c.png)
 
-## Edit Logseq「config.edn」 (part of)
+## Edit「config.edn」 (part of)
 ![1662772563325-tkA2Gj61wv](https://user-images.githubusercontent.com/111847207/189498869-2b99016d-a2b3-44cc-80ed-f9e0cb123d78.png)
 
 
@@ -33,7 +30,7 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
 
  1. ⏰ Scheduled appointments, 14 days #TODO
 
-```clojure
+```css
  :default-queries{
 	 :journals[
 
@@ -130,5 +127,4 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
 
     ]}
 
- 
- 
+```
