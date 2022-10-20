@@ -1,0 +1,1 @@
+# Logseq-default-queries-journals
