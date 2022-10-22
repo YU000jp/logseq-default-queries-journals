@@ -5,10 +5,12 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
  - Enhancing Journal Queries turns Logseq into an outliner task management tool.
 
 ## Edit config.edn
+ - On Logseq, edit config.edn file. Once you've done that, create your own task and try it out.
 
 https://user-images.githubusercontent.com/111847207/197335149-1a1f4261-d58d-4466-8077-135d3b92229a.mp4
 
-BEFORE
+### BEFORE
+ - There are only two kinds of queries by default. 
 ![スクリーンショット 2022-10-22 205243](https://user-images.githubusercontent.com/111847207/197337891-ea894a82-c13f-4d75-8488-47a994189469.png)
 
 
