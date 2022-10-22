@@ -4,10 +4,11 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
 # Logseq-default-queries-journals
  - Enhancing Journal Queries turns Logseq into an outliner task management tool.
 
-## 「Edit config.edn」 (part of)
+## Edit config.edn
 
 https://user-images.githubusercontent.com/111847207/197335149-1a1f4261-d58d-4466-8077-135d3b92229a.mp4
 
+BEFORE
 ![スクリーンショット 2022-10-22 205243](https://user-images.githubusercontent.com/111847207/197337891-ea894a82-c13f-4d75-8488-47a994189469.png)
 
 
