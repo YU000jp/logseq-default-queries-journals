@@ -4,15 +4,14 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
 # Logseq-default-queries-journals
  - Enhancing Journal Queries turns Logseq into an outliner task management tool.
 
-## Edit「config.edn」 (part of)
-![1662772563325-tkA2Gj61wv](https://user-images.githubusercontent.com/111847207/189498869-2b99016d-a2b3-44cc-80ed-f9e0cb123d78.png)
+## 「Edit config.edn」 (part of)
+
+https://user-images.githubusercontent.com/111847207/197335149-1a1f4261-d58d-4466-8077-135d3b92229a.mp4
 
 
+ - See "[Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f)" or my sample code.
 
-
- - See "[Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f)" or my sample.
-
-### My sample
+### sample code
 
  Contains the following 7 queries
 
