@@ -7,7 +7,7 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
 ## Edit config.edn
  - On Logseq, edit config.edn file. Once you've done that, create your own task and try it out.
 
-https://user-images.githubusercontent.com/111847207/197335149-1a1f4261-d58d-4466-8077-135d3b92229a.mp4
+[change-config.webm](https://user-images.githubusercontent.com/111847207/197364897-4455e943-79a8-4dbe-97d5-5a9ae97ca51a.webm)
 
 ### BEFORE
  - There are only two kinds of queries by default. 
