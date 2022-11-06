@@ -7,7 +7,7 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
 ## Edit config.edn
  - On Logseq, edit config.edn file. Once you've done that, create your own task and try it out.
 
-![How to update Journal queries (Animation)](https://user-images.githubusercontent.com/111847207/200146222-066163ad-f2a7-408e-8070-5a68453c1c05.gif)
+![Animation1](https://user-images.githubusercontent.com/111847207/200155115-0344d96b-5982-43ed-b3cb-f40107b5b858.gif)
 
 ### BEFORE
  - There are only two kinds of queries by default. 
