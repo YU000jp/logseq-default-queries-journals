@@ -15,7 +15,7 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
 
 
 
-### CHANGE
+### REPLACE
  - See "[Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)" or my sample code.
 
 ### sample code
