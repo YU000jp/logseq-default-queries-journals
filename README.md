@@ -1,7 +1,7 @@
 
 For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
 
-# Logseq-default-queries-journals
+# logseq-default-queries-journals
  - Enhancing Journal Queries turns Logseq into an outliner task management tool.
 
 ## Edit config.edn
