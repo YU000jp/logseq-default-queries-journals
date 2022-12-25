@@ -132,7 +132,7 @@
 
 ```
 
-Fr [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
+From [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
 
 ---
 
