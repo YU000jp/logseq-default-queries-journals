@@ -1,6 +1,3 @@
-
-For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
-
 # logseq-default-queries-journals
  - Enhancing Journal Queries turns Logseq into an outliner task management tool.
 
@@ -134,6 +131,9 @@ For [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layou
     ]}
 
 ```
+
+Fr [Logseq Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
+
 ---
 
 <a href="https://www.buymeacoffee.com/yu000japan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="🍌Buy Me A Coffee" style="height: 42px;width: 152px" ></a>
