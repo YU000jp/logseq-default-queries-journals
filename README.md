@@ -86,7 +86,7 @@
            [(> ?d ?start)]
            [(< ?d ?next)]
          ]
-  :inputs [:7d :10d-after]
+  :inputs [:0d :10d-after]
       :result-transform  (fn [result]
              (sort-by  (fn [h]
              (get h :block/deadline) ) result ))
@@ -119,7 +119,7 @@
          [(> ?d ?start)]
          [(< ?d ?next)]
         ]
- :inputs [:7d :14d-after]
+ :inputs [:0d :14d-after]
       :result-transform  (fn [result]
              (sort-by  (fn [d]
              (get d :block/scheduled) ) result ))
