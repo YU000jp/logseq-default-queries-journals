@@ -17,6 +17,7 @@
 #### Link
  - [Advanced Queries (docs.logseq.com)](https://docs.logseq.com/#/page/advanced%20queries)
  - [Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
+ - [Queries for task management (discuss.logseq.com)](https://discuss.logseq.com/t/queries-for-task-management/14937)
  
 #### Try sample code
 
