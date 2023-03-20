@@ -1,5 +1,5 @@
 # logseq-default-queries-journals
- - Enhancing Journal Queries turns Logseq into an outliner task management tool.
+ - [Result] Enhancing Journal Queries turns Logseq into an outliner task management tool.
 
 ## Edit config.edn
  - On Logseq, edit config.edn file. Once you've done that, create your own task and try it out.
@@ -7,7 +7,7 @@
 ![Animation1](https://user-images.githubusercontent.com/111847207/200155115-0344d96b-5982-43ed-b3cb-f40107b5b858.gif)
 
 ### BEFORE
- - There are only two kinds of queries by default. 
+ - [Problem] There are only two kinds of queries by default. 
 ![image](https://user-images.githubusercontent.com/111847207/200147305-6fe68860-faef-4f53-bf42-4c5a11d3330c.png)
 
 
