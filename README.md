@@ -1,41 +1,37 @@
-# logseq-default-queries-journals
- - [Result] Enhancing Journal Queries turns Logseq into an outliner task management tool.
+# *How to customize default queries* on Logseq
 
 ## Edit config.edn
- - On Logseq, edit config.edn file. Once you've done that, create your own task and try it out.
+
+- On Logseq, edit config.edn file. Once done that, create any tasks and try it out.
 
 ![Animation1](https://user-images.githubusercontent.com/111847207/200155115-0344d96b-5982-43ed-b3cb-f40107b5b858.gif)
 
-### BEFORE
- - [Problem] There are only two kinds of queries by default. 
+### Before
+
+- [Problem] There are only two kinds of queries by default. 
 ![image](https://user-images.githubusercontent.com/111847207/200147305-6fe68860-faef-4f53-bf42-4c5a11d3330c.png)
 
 
 
-### REPLACE
+### Replace
 
-#### Link
- - [Advanced Queries (docs.logseq.com)](https://docs.logseq.com/#/page/advanced%20queries)
- - [Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
- - [Queries for task management (discuss.logseq.com)](https://discuss.logseq.com/t/queries-for-task-management/14937)
+#### Links
+
+- [Advanced Queries (docs.logseq.com)](https://docs.logseq.com/#/page/advanced%20queries)
+- [Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
+- [Queries for task management (discuss.logseq.com)](https://discuss.logseq.com/t/queries-for-task-management/14937)
  
 #### Try sample code
 
- Contains the following 7 queries
+- Contains the following 7 queries
 
- 1. 🔨 Working Tasks #NOW
-
- 1. 📅 Scheduled to #LATER
-
- 1. ⚠️ OVERDUE
-
- 1. Deadline within 10 days
-
- 1. 🐬 Project #DOING
-
- 1. ⏳ Not Assigned #WAITING
-
- 1. ⏰ Scheduled appointments, 14 days #TODO
+1. 🔨 Working Tasks #NOW
+1. 📅 Scheduled to #LATER
+1. ⚠️ OVERDUE
+1. Deadline within 10 days
+1. 🐬 Project #DOING
+1. ⏳ Not Assigned #WAITING
+1. ⏰ Scheduled appointments, 14 days #TODO
 
 ```css
  :default-queries{
@@ -142,5 +138,5 @@
 
 ---
 
-From [Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
+- From [Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
 
