@@ -33,6 +33,8 @@
 1. ⏳ Not Assigned #WAITING
 1. ⏰ Scheduled appointments, 14 days #TODO
 
+> Update: 2023/07/23
+
 ```CSS
 
  :default-queries {:journals [
