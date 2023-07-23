@@ -37,7 +37,7 @@
 
 ```CSS
 
- :default-queries {:journals [
+  :default-queries {:journals [
                               {
                                :title "🔨 Working Tasks #NOW"
                               :query (task NOW)
@@ -92,7 +92,7 @@
                                       [(contains? #{"TODO"} ?marker)]
                                       ]
                               :inputs [:0d :10d-after]
-                              :result-transform  (fn [result]
+                              :result-transform (fn [result] (sort-by (juxt (fn [d] (get d :block/deadline) ) ) result)
                                                    (sort-by  (fn [h]
                                                                (get h :block/deadline)) result))
                               :collapsed? true
@@ -119,7 +119,7 @@
                                       [(contains? #{"TODO"} ?marker)]
                                       ]
                               :inputs [:0d :14d-after]
-                              :result-transform  (fn [result]
+                              :result-transform (fn [result] (sort-by (juxt (fn [d] (get d :block/scheduled) ) ) result)
                                                    (sort-by  (fn [d]
                                                                (get d :block/scheduled)) result))
                               :collapsed? false}
