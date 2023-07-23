@@ -33,7 +33,7 @@
 1. ⏳ Not Assigned #WAITING
 1. ⏰ Scheduled appointments, 14 days #TODO
 
-```DataScript
+```CSS
 
  :default-queries {:journals [
                               {
