@@ -25,13 +25,13 @@
 
 - Contains the following 7 queries
 
-1. 🔨 Working Tasks #NOW
-1. 🐬 Project #DOING
-1. 📅 Scheduled to #LATER
+1. 🔨 Working Tasks **#NOW**
+1. 🐬 Project **#DOING**
+1. 📅 Scheduled to **#LATER**
 1. ⚠️ OVERDUE
 1. Deadline within 10 days
-1. ⏳ Not Assigned #WAITING
-1. ⏰ Scheduled appointments, 14 days #TODO
+1. ⏳ Not Assigned **#WAITING**
+1. ⏰ Scheduled appointments, 14 days **#TODO**
 
 > Update: 2023/07/23
 
