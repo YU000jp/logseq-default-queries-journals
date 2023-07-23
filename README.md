@@ -21,15 +21,15 @@
 - [Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
 - [Queries for task management (discuss.logseq.com)](https://discuss.logseq.com/t/queries-for-task-management/14937)
  
-#### Try sample code
+### Or try this sample code
 
 - Contains the following 7 queries
 
 1. 🔨 Working Tasks #NOW
+1. 🐬 Project #DOING
 1. 📅 Scheduled to #LATER
 1. ⚠️ OVERDUE
 1. Deadline within 10 days
-1. 🐬 Project #DOING
 1. ⏳ Not Assigned #WAITING
 1. ⏰ Scheduled appointments, 14 days #TODO
 
