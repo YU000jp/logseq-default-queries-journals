@@ -38,12 +38,12 @@
 ```CSS
 
   :default-queries {:journals [
+
                               {
                                :title "🔨 Working Tasks #NOW"
                               :query (task NOW)
                               :collapsed? true
                                }
-
 
                              {
                               :title "🐬 Project #DOING"
@@ -51,13 +51,11 @@
                               :collapsed? false
                               }
 
-
                              {
                               :title "📅  Scheduled to #LATER"
                               :query (task LATER)
                               :collapsed? false
                               }
-
 
                              {
                               :title "⚠️ OVERDUE"
@@ -78,7 +76,6 @@
                               :collapsed? true
                               }
 
-
                              {
                               :title "Deadline within 10 days"
                               :query [:find (pull ?block [*])
@@ -98,13 +95,11 @@
                               :collapsed? true
                               }
 
-
                              {
                               :title "⏳ Not Assigned #WAITING"
                               :query (task WAITING)
                               :collapsed? true
                               }
-
 
                              {
                               :title "⏰ Scheduled appointments, 14 days #TODO"
@@ -124,6 +119,7 @@
                                                                (get d :block/scheduled)) result))
                               :collapsed? false}
                              ]
+
                               }
 
 ```
