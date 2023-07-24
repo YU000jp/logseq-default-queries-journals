@@ -53,6 +53,7 @@
                                :title "🔨 Working Tasks #NOW"
                               :query (task NOW)
                               :collapsed? true
+                              :breadcrumb-show? false
                                }
 
                              {
@@ -65,6 +66,7 @@
                               :title "📅  Scheduled to #LATER"
                               :query (task LATER)
                               :collapsed? false
+                              :breadcrumb-show? false
                               }
 
                              {
