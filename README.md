@@ -43,7 +43,6 @@
                               {
                                :title ["☑️ Yesterday & Today DONE task"]
                                :query (and (between yesterday tomorrow) (task DONE) )
-                               :table-view? false
                                :group-by-page? false
                                :breadcrumb-show? false
                                :collapsed? true
