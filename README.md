@@ -23,9 +23,8 @@
  
 ### Or try this sample code
 
-- Contains the following 8 queries
+- Contains the following 7 queries
 
-1. ☑️ Yesterday & Today DONE task
 1. 🔨 Working Tasks **#NOW**
 1. 🐬 Project **#DOING**
 1. 📅 Scheduled to **#LATER**
@@ -39,14 +38,6 @@
 ```CSS
 
   :default-queries {:journals [
-
-                              {
-                               :title ["☑️ Yesterday & Today DONE task"]
-                               :query (and (between yesterday tomorrow) (task DONE) )
-                               :group-by-page? false
-                               :breadcrumb-show? false
-                               :collapsed? true
-                               }
 
                               {
                                :title "🔨 Working Tasks #NOW"
