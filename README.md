@@ -35,100 +35,99 @@
 
 > Update: 2023/07/24
 
-```CSS
+```Clojure
 
-  :default-queries {:journals [
+:default-queries {:journals [
 
-                              {
-                               :title "🔨 Working Tasks #NOW"
-                              :query (task NOW)
-                              :collapsed? true
-                              :breadcrumb-show? false
-                               }
+  {
+    :title "🔨 Working Tasks #NOW"
+    :query (task NOW)
+    :collapsed? true
+    :breadcrumb-show? false
+  }
+  {
+    :title "🐬 Project #DOING"
+    :query (task DOING)
+    :collapsed? false
+  }
+  {
+    :title "📅 Scheduled to #LATER"
+    :query (task LATER)
+    :collapsed? false
+    :breadcrumb-show? false
+  }
+  {
+    :title "⚠️ OVERDUE"
+    :query [:find (pull ?block [*])
+            :in $ ?start ?today
+            :where
+            [?block :block/marker ?marker]
+            (or
+             [?block :block/scheduled ?d]
+             [?block :block/deadline ?d])
+            [(>= ?d ?start)]
+            [(< ?d ?today)]
+            [(contains? #{"NOW" "LATER" "TODO" "DOING" "WAITING"} ?marker)]
+    ]
+    :inputs [:180d :today]
+    :result-transform (fn [result]
+                       (sort-by (fn [d]
+                                  (get d :block/deadline)) result))
+    :collapsed? true
+  }
+  {
+    :title "Deadline within 10 days"
+    :query [:find (pull ?block [*])
+            :in $ ?start ?next
+            :where
+            [?block :block/marker ?marker]
+            (or
+             [?block :block/deadline ?d])
+            [(> ?d ?start)]
+            [(< ?d ?next)]
+            [(contains? #{"TODO"} ?marker)]
+    ]
+    :inputs [:0d :10d-after]
+    :result-transform (fn [result]
+                       (sort-by (juxt (fn [d] (get d :block/deadline)) result)
+                       (sort-by (fn [h]
+                                  (get h :block/deadline)) result))
+    :collapsed? true
+  }
+  {
+    :title "⏳ Not Assigned #WAITING"
+    :query (task WAITING)
+    :collapsed? true
+  }
+  {
+    :title "⏰ Scheduled appointments, 14 days #TODO"
+    :query [:find (pull ?block [*])
+            :in $ ?start ?next
+            :where
+            [?block :block/marker ?marker]
+            (or
+             [?block :block/scheduled ?d])
+            [(> ?d ?start)]
+            [(< ?d ?next)]
+            [(contains? #{"TODO"} ?marker)]
+    ]
+    :inputs [:0d :14d-after]
+    :result-transform (fn [result]
+                       (sort-by (juxt (fn [d] (get d :block/scheduled)) result)
+                       (sort-by (fn [d]
+                                  (get d :block/scheduled)) result))
+    :collapsed? false
+  }
 
-                             {
-                              :title "🐬 Project #DOING"
-                              :query (task DOING)
-                              :collapsed? false
-                              }
-
-                             {
-                              :title "📅  Scheduled to #LATER"
-                              :query (task LATER)
-                              :collapsed? false
-                              :breadcrumb-show? false
-                              }
-
-                             {
-                              :title "⚠️ OVERDUE"
-                              :query [:find (pull ?block [*])
-                                      :in $ ?start ?today
-                                      :where
-                                      [?block :block/marker ?marker]
-                                      (or
-                                       [?block :block/scheduled ?d]
-                                       [?block :block/deadline ?d])
-                                      [(>= ?d ?start)]
-                                      [(<   ?d ?today)]
-                                      [(contains? #{"NOW" "LATER" "TODO" "DOING" "WAITING"} ?marker)]]
-                              :inputs [:180d :today]
-                              :result-transform  (fn [result]
-                                                   (sort-by  (fn [d]
-                                                               (get d :block/deadline)) result))
-                              :collapsed? true
-                              }
-
-                             {
-                              :title "Deadline within 10 days"
-                              :query [:find (pull ?block [*])
-                                      :in $ ?start ?next
-                                      :where
-                                      [?block :block/marker ?marker]
-                                      (or
-                                       [?block :block/deadline ?d])
-                                      [(> ?d ?start)]
-                                      [(< ?d ?next)]
-                                      [(contains? #{"TODO"} ?marker)]
-                                      ]
-                              :inputs [:0d :10d-after]
-                              :result-transform (fn [result] (sort-by (juxt (fn [d] (get d :block/deadline) ) ) result)
-                                                   (sort-by  (fn [h]
-                                                               (get h :block/deadline)) result))
-                              :collapsed? true
-                              }
-
-                             {
-                              :title "⏳ Not Assigned #WAITING"
-                              :query (task WAITING)
-                              :collapsed? true
-                              }
-
-                             {
-                              :title "⏰ Scheduled appointments, 14 days #TODO"
-                              :query [:find (pull ?block [*])
-                                      :in $ ?start ?next
-                                      :where
-                                      [?block :block/marker ?marker]
-                                      (or
-                                       [?block :block/scheduled ?d])
-                                      [(> ?d ?start)]
-                                      [(< ?d ?next)]
-                                      [(contains? #{"TODO"} ?marker)]
-                                      ]
-                              :inputs [:0d :14d-after]
-                              :result-transform (fn [result] (sort-by (juxt (fn [d] (get d :block/scheduled) ) ) result)
-                                                   (sort-by  (fn [d]
-                                                               (get d :block/scheduled)) result))
-                              :collapsed? false}
-                             ]
-
-                              }
+]}
 
 ```
 
-##### whether to collapse the queryset
+##### querysets
 
-- `:collapsed? false` or `:collapsed? true`
+- :title "`TITLE`"
+- :collapsed? `false` or `true`
+- :breadcrumb-show? `false` or `true`
 
 ---
 
