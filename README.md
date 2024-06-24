@@ -1,39 +1,38 @@
-# *How to customize default queries* on Logseq
+# How to Customize Default Queries on Logseq
 
 ## Edit config.edn
 
-- On Logseq, edit config.edn file. Once done that, create any tasks and try it out.
+1. Open Logseq and edit the `config.edn` file.
+2. After making your changes, create a task to test it out.
 
 ![Animation1](https://user-images.githubusercontent.com/111847207/200155115-0344d96b-5982-43ed-b3cb-f40107b5b858.gif)
 
 ### Before
 
-- [Problem] There are only two kinds of queries by default. 
+- **Problem:** By default, there are only two types of queries available. 
 ![image](https://user-images.githubusercontent.com/111847207/200147305-6fe68860-faef-4f53-bf42-4c5a11d3330c.png)
-
-
 
 ### Replace
 
-#### Links
+#### Useful Links
 
 - [Advanced Queries (docs.logseq.com)](https://docs.logseq.com/#/page/advanced%20queries)
 - [Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
-- [Queries for task management (discuss.logseq.com)](https://discuss.logseq.com/t/queries-for-task-management/14937)
- 
-### Or try this sample code
+- [Queries for Task Management (discuss.logseq.com)](https://discuss.logseq.com/t/queries-for-task-management/14937)
 
-- Contains the following 7 queries
+### Sample Code
+
+- Here is a sample code with 7 queries:
 
 1. 🔨 Working Tasks **#NOW**
-1. 🐬 Project **#DOING**
-1. 📅 Scheduled to **#LATER**
-1. ⚠️ OVERDUE
-1. Deadline within 10 days
-1. ⏳ Not Assigned **#WAITING**
-1. ⏰ Scheduled appointments, 14 days **#TODO**
+2. 🐬 Project **#DOING**
+3. 📅 Scheduled to **#LATER**
+4. ⚠️ OVERDUE
+5. Deadline within 10 days
+6. ⏳ Not Assigned **#WAITING**
+7. ⏰ Scheduled Appointments, 14 days **#TODO**
 
-> Update: 2023/07/24
+> Update: 20230724
 
 ```Clojure
 
