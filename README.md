@@ -31,56 +31,60 @@ This guide provides a powerful set of 7 task management queries:
 | ⏰ Scheduled Tasks | Show 14-day schedule | #TODO |
 
 ```Clojure
-
+;; Default queries configuration for Logseq journals
 :default-queries {:journals [
-
   {
+    ;; Simple query: Find all NOW tasks
     :title "🔨 Working Tasks #NOW"
     :query (task NOW)
     :collapsed? true
     :breadcrumb-show? false
   }
   {
+    ;; Simple query: Track ongoing project tasks
     :title "🐬 Active Projects #DOING"
     :query (task DOING)
     :collapsed? false
   }
   {
+    ;; Simple query: List scheduled future tasks
     :title "📅 Future Tasks #LATER"
     :query (task LATER)
     :collapsed? false
     :breadcrumb-show? false
   }
   {
+    ;; Advanced query: Find overdue tasks from last 180 days
     :title "⚠️ Overdue Tasks"
-    :query [:find (pull ?block [*])
-            :in $ ?start ?today
+    :query [:find (pull ?block [*])  ;; Pull all block properties
+            :in $ ?start ?today      ;; Input parameters: start date and today
             :where
-            [?block :block/marker ?marker]
-            (or
+            [?block :block/marker ?marker]  ;; Find blocks with task markers
+            (or                             ;; Match either scheduled or deadline
              [?block :block/scheduled ?d]
              [?block :block/deadline ?d])
-            [(>= ?d ?start)]
-            [(< ?d ?today)]
-            [(contains? #{"NOW" "LATER" "TODO" "DOING" "WAITING"} ?marker)]
+            [(>= ?d ?start)]               ;; Date >= start date
+            [(< ?d ?today)]                ;; Date < today
+            [(contains? #{"NOW" "LATER" "TODO" "DOING" "WAITING"} ?marker)]  ;; Task types to include
     ]
-    :inputs [:180d :today]
-    :result-transform (fn [result]
+    :inputs [:180d :today]  ;; Look back 180 days from today
+    :result-transform (fn [result]  ;; Sort results by deadline
                        (sort-by (fn [d]
                                   (get d :block/deadline)) result))
     :collapsed? true
   }
   {
+    ;; Advanced query: Show tasks due within next 10 days
     :title "📊 10-Day Deadline #TODO"
     :query [:find (pull ?block [*])
-            :in $ ?start ?next
+            :in $ ?start ?next       ;; Input parameters: start and end dates
             :where
             [?block :block/marker ?marker]
             (or
-             [?block :block/deadline ?d])
-            [(> ?d ?start)]
-            [(< ?d ?next)]
-            [(contains? #{"TODO"} ?marker)]
+             [?block :block/deadline ?d])  ;; Only check deadline
+            [(> ?d ?start)]                ;; Date > start date
+            [(< ?d ?next)]                 ;; Date < end date (10 days from now)
+            [(contains? #{"TODO"} ?marker)] ;; Only TODO tasks
     ]
     :inputs [:0d :10d-after]
     :result-transform (fn [result]
@@ -90,24 +94,28 @@ This guide provides a powerful set of 7 task management queries:
     :collapsed? true
   }
   {
+    ;; Simple query: List tasks waiting for input or external factors
+    ;; Use this for tasks that are blocked or dependent on others
     :title "⏳ Pending Tasks #WAITING"
     :query (task WAITING)
     :collapsed? true
   }
   {
+    ;; Advanced query: Find scheduled tasks for next 14 days
+    ;; Useful for planning and calendar view
     :title "⏰ Scheduled Tasks #TODO"
-    :query [:find (pull ?block [*])
-            :in $ ?start ?next
+    :query [:find (pull ?block [*])        ;; Pull all block properties
+            :in $ ?start ?next             ;; Input parameters: start and next 14 days
             :where
-            [?block :block/marker ?marker]
+            [?block :block/marker ?marker]  ;; Find blocks with task markers
             (or
-             [?block :block/scheduled ?d])
-            [(> ?d ?start)]
-            [(< ?d ?next)]
-            [(contains? #{"TODO"} ?marker)]
+             [?block :block/scheduled ?d])  ;; Only check scheduled date
+            [(> ?d ?start)]                ;; Date > start date (today)
+            [(< ?d ?next)]                 ;; Date < end date (14 days from now)
+            [(contains? #{"TODO"} ?marker)] ;; Only show TODO tasks
     ]
-    :inputs [:0d :14d-after]
-    :result-transform (fn [result]
+    :inputs [:0d :14d-after]              ;; Set date range: today to 14 days ahead
+    :result-transform (fn [result]         ;; Sort results by scheduled date
                        (sort-by (juxt (fn [d] (get d :block/scheduled)) result)
                        (sort-by (fn [d]
                                   (get d :block/scheduled)) result))
