@@ -1,38 +1,41 @@
-# How to Customize Default Queries on Logseq
+# Guide to Customizing Logseq Default Queries 🎯
 
-## Edit config.edn
+## Quick Start Guide
 
-1. Open Logseq and edit the `config.edn` file.
-2. After making your changes, create a task to test it out.
+### Step 1: Access Configuration
+1. Open Logseq
+2. Navigate to Settings > Config
+3. Find and edit the `config.edn` file
 
-![Animation1](https://user-images.githubusercontent.com/111847207/200155115-0344d96b-5982-43ed-b3cb-f40107b5b858.gif)
+![How to access config](https://user-images.githubusercontent.com/111847207/200155115-0344d96b-5982-43ed-b3cb-f40107b5b858.gif)
 
-### Before
+### Step 2: Why Customize?
+By default, Logseq provides only basic query options:
 
-- **Problem:** By default, there are only two types of queries available. 
-![image](https://user-images.githubusercontent.com/111847207/200147305-6fe68860-faef-4f53-bf42-4c5a11d3330c.png)
+![Default queries](https://user-images.githubusercontent.com/111847207/200147305-6fe68860-faef-4f53-bf42-4c5a11d3330c.png)
 
-### Replace
+---
 
-#### Useful Links
+## Enhanced Query Pack 📦
 
-- [Advanced Queries (docs.logseq.com)](https://docs.logseq.com/#/page/advanced%20queries)
-- [Logseq Default Query 6-pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
-- [Queries for Task Management (discuss.logseq.com)](https://discuss.logseq.com/t/queries-for-task-management/14937)
+This guide provides a powerful set of 7 task management queries:
 
-### Sample Code
+| Query Type | Purpose | Tag |
+|------------|---------|-----|
+| 🔨 Working Tasks | Track current tasks | #NOW |
+| 🐬 Active Projects | Monitor ongoing projects | #DOING |
+| 📅 Future Tasks | View scheduled items | #LATER |
+| ⚠️ Overdue Tasks | Show missed deadlines | - |
+| 📊 10-Day Deadline | View upcoming deadlines | #TODO |
+| ⏳ Pending Tasks | List waiting items | #WAITING |
+| ⏰ Scheduled Tasks | Show 14-day schedule | #TODO |
 
-- Here is a sample code with 7 queries:
+## Resources & References 📚
 
-1. 🔨 Working Tasks **#NOW**
-2. 🐬 Project **#DOING**
-3. 📅 Scheduled to **#LATER**
-4. ⚠️ OVERDUE
-5. Deadline within 10 days
-6. ⏳ Not Assigned **#WAITING**
-7. ⏰ Scheduled Appointments, 14 days **#TODO**
-
-> Update: 20230724
+Need more help? Check these resources:
+- [Official Advanced Queries Documentation](https://docs.logseq.com/#/page/advanced%20queries)
+- [Community Query Pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
+- [Task Management Discussion](https://discuss.logseq.com/t/queries-for-task-management/14937)
 
 ```Clojure
 
@@ -45,18 +48,18 @@
     :breadcrumb-show? false
   }
   {
-    :title "🐬 Project #DOING"
+    :title "🐬 Active Projects #DOING"
     :query (task DOING)
     :collapsed? false
   }
   {
-    :title "📅 Scheduled to #LATER"
+    :title "📅 Future Tasks #LATER"
     :query (task LATER)
     :collapsed? false
     :breadcrumb-show? false
   }
   {
-    :title "⚠️ OVERDUE"
+    :title "⚠️ Overdue Tasks"
     :query [:find (pull ?block [*])
             :in $ ?start ?today
             :where
@@ -75,7 +78,7 @@
     :collapsed? true
   }
   {
-    :title "Deadline within 10 days"
+    :title "📊 10-Day Deadline #TODO"
     :query [:find (pull ?block [*])
             :in $ ?start ?next
             :where
@@ -94,12 +97,12 @@
     :collapsed? true
   }
   {
-    :title "⏳ Not Assigned #WAITING"
+    :title "⏳ Pending Tasks #WAITING"
     :query (task WAITING)
     :collapsed? true
   }
   {
-    :title "⏰ Scheduled appointments, 14 days #TODO"
+    :title "⏰ Scheduled Tasks #TODO"
     :query [:find (pull ?block [*])
             :in $ ?start ?next
             :where
@@ -122,13 +125,16 @@
 
 ```
 
-##### querysets
+## Configuration Options ⚙️
 
-- :title "`TITLE`"
-- :collapsed? `false` or `true`
-- :breadcrumb-show? `false` or `true`
+Each query supports these settings:
+- `title`: Display name (supports emojis)
+- `collapsed?`: Initial view state (`true`/`false`)
+- `breadcrumb-show?`: Navigation path display (`true`/`false`)
 
----
+> Last Updated: 2023/07/24
+
+--- 
 
 - From [Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
 
