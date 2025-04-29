@@ -30,13 +30,6 @@ This guide provides a powerful set of 7 task management queries:
 | ⏳ Pending Tasks | List waiting items | #WAITING |
 | ⏰ Scheduled Tasks | Show 14-day schedule | #TODO |
 
-## Resources & References 📚
-
-Need more help? Check these resources:
-- [Official Advanced Queries Documentation](https://docs.logseq.com/#/page/advanced%20queries)
-- [Community Query Pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
-- [Task Management Discussion](https://discuss.logseq.com/t/queries-for-task-management/14937)
-
 ```Clojure
 
 :default-queries {:journals [
@@ -135,6 +128,15 @@ Each query supports these settings:
 > Last Updated: 2023/07/24
 
 --- 
+
+## Resources & References 📚
+
+Need more help? Check these resources:
+- [Official Advanced Queries Documentation](https://docs.logseq.com/#/page/advanced%20queries)
+- [Community Query Pack](https://gist.github.com/psu/abf8d8c206f11d56c0e214d0bfcf065f#file-logseq-config-default-queries-edn-L50-L257)
+- [Task Management Discussion](https://discuss.logseq.com/t/queries-for-task-management/14937)
+
+---
 
 - From [Column Layout plugin](https://github.com/YU000jp/Logseq-column-Layout)
 
