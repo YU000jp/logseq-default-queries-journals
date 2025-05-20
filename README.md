@@ -116,7 +116,7 @@ This guide provides a powerful set of 7 task management queries:
     ]
     :inputs [:0d :14d-after]              ;; Set date range: today to 14 days ahead
     :result-transform (fn [result]         ;; Sort results by scheduled date
-                       (sort-by (juxt (fn [d] (get d :block/scheduled)) result)
+                       (sort-by (juxt (fn [d] (get d :block/scheduled)) result))
                        (sort-by (fn [d]
                                   (get d :block/scheduled)) result))
     :collapsed? false
