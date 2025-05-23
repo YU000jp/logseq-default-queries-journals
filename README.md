@@ -18,6 +18,9 @@ By default, Logseq provides only basic query options:
 
 ## Enhanced Query Pack 📦
 
+> [!WARNING]
+Those codes does not work with Logseq db version.
+
 This guide provides a powerful set of 7 task management queries:
 
 | Query Type | Purpose | Tag |
