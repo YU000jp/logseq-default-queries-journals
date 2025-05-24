@@ -35,8 +35,8 @@ This guide provides a powerful set of 7 task management queries:
 
 ```Clojure
 ;; Default queries configuration for Logseq journals
-:default-queries {:journals [
-  {
+ :default-queries {:journals [
+   {
     ;; Simple query: Find all NOW tasks
     :title "🔨 Working Tasks #NOW"
     :query (task NOW)
@@ -83,15 +83,14 @@ This guide provides a powerful set of 7 task management queries:
             :in $ ?start ?next       ;; Input parameters: start and end dates
             :where
             [?block :block/marker ?marker]
-            (or
-             [?block :block/deadline ?d])  ;; Only check deadline
+            [?block :block/deadline ?d]  ;; Only check deadline
             [(> ?d ?start)]                ;; Date > start date
             [(< ?d ?next)]                 ;; Date < end date (10 days from now)
             [(contains? #{"TODO"} ?marker)] ;; Only TODO tasks
     ]
     :inputs [:0d :10d-after]
     :result-transform (fn [result]
-                       (sort-by (juxt (fn [d] (get d :block/deadline)) result)
+                       (sort-by (juxt (fn [d] (get d :block/deadline)) result))
                        (sort-by (fn [h]
                                   (get h :block/deadline)) result))
     :collapsed? true
@@ -124,9 +123,7 @@ This guide provides a powerful set of 7 task management queries:
                                   (get d :block/scheduled)) result))
     :collapsed? false
   }
-
-]}
-
+                              ]}
 ```
 
 ## Configuration Options ⚙️
