@@ -110,8 +110,7 @@ This guide provides a powerful set of 7 task management queries:
             :in $ ?start ?next             ;; Input parameters: start and next 14 days
             :where
             [?block :block/marker ?marker]  ;; Find blocks with task markers
-            (or
-             [?block :block/scheduled ?d])  ;; Only check scheduled date
+            [?block :block/scheduled ?d]   ;; Only check scheduled date
             [(> ?d ?start)]                ;; Date > start date (today)
             [(< ?d ?next)]                 ;; Date < end date (14 days from now)
             [(contains? #{"TODO"} ?marker)] ;; Only show TODO tasks
