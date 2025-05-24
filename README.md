@@ -133,8 +133,6 @@ Each query supports these settings:
 - `collapsed?`: Initial view state (`true`/`false`)
 - `breadcrumb-show?`: Navigation path display (`true`/`false`)
 
-> Last Updated: 2023/07/24
-
 --- 
 
 ## Resources & References 📚
