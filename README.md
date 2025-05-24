@@ -4,7 +4,7 @@
 
 ### Step 1: Access Configuration
 1. Open Logseq
-2. Navigate to Settings > Config
+2. Navigate to Settings > General
 3. Find and edit the `config.edn` file
 
 ![How to access config](https://user-images.githubusercontent.com/111847207/200155115-0344d96b-5982-43ed-b3cb-f40107b5b858.gif)
