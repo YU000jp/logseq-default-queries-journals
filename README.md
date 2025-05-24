@@ -33,6 +33,7 @@ This guide provides a powerful set of 7 task management queries:
 | ⏳ Pending Tasks | List waiting items | #WAITING |
 | ⏰ Scheduled Tasks | Show 14-day schedule | #TODO |
 
+🆙 Fix bug 20250524
 ```Clojure
 ;; Default queries configuration for Logseq journals
  :default-queries {:journals [
